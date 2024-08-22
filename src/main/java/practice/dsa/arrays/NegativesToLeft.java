@@ -41,9 +41,46 @@ public class NegativesToLeft {
         }
         return ints;
     }
+    public static int[] rotateSubArray(int si, int ei, int[] ints){
+//        if(si >= ints.length || ei >= ints.length) return null;
+        int temp = ints[ei];
+        for(int i=ei;i>si;i--){
+            ints[i] = ints[i-1];
+        }
+        ints[si] = temp;
+        return ints;
+    }
+    public static int[] negativesToRightUsingSlidingWindow(int... ints){
+        int p1 = 0;
+        for(int i=0;i<ints.length;i++){
+            if(ints[i]>=0){
+                rotateSubArray(p1,i,ints);
+                p1++;
+            }
+        }
+        return ints;
+    }
+    public static int[] negativesToLeftUsingSlidingWindow(int... ints){
+        int p1 = 0;
+        for(int i=0;i<ints.length;i++){
+            if(ints[i]<0){
+                rotateSubArray(p1,i,ints);
+                p1++;
+            }
+        }
+        return ints;
+    }
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(negativesToLeft(-1, 2, -3, 4, 5, -1, -4, -5, 0, 9, -66, -45, 0, -90, 45)));
-        System.out.println(Arrays.toString(negativesToRight(-1, 2, -3, 4, 5, -1, -4, -5, 0, 9, -66, -45, 0, -90, 45)));
+//        System.out.println(Arrays.toString(negativesToLeft(-1, 2, -3, 4, 5, -1, -4, -5, 0, 9, -66, -45, 0, -90, 45)));
+//        System.out.println(Arrays.toString(negativesToRight(-1, 2, -3, 4, 5, -1, -4, -5, 0, 9, -66, -45, 0, -90, 45)));
+        System.out.println("rotation   "+Arrays.toString(rotateSubArray(0,7,new int[]{0,1,2,3,4,5,6,7,8,9})));
+//        System.out.println(Arrays.toString(negativesToRightUsingSlidingWindow(-1, 2, -3, 4, 5, -1, -4, -5, 0, 9, -66, -45, 0, -90, 45)));
+        System.out.println(Arrays.toString(negativesToRightUsingSlidingWindow(1,-1,2,-2,3,-3)));
+        System.out.println(Arrays.toString(negativesToRightUsingSlidingWindow(-1,-2,-3,-4,-5,0,-9,-99,1,2,3,4,5,6,7,8,9)));
+
+
+        System.out.println(Arrays.toString(negativesToLeftUsingSlidingWindow(-1,-2,-3,-4,-5,0,-9,-99,1,2,3,4,5,6,7,8,9)));
+
 
 
     }
