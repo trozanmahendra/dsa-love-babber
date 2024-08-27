@@ -26,7 +26,6 @@ public class LargestSumContiguousSubArray {
         }
         return sum;
     }
-
     public static long findUsingKadanesAlgorithm(int[] arr){
         long max_so_far = Long.MIN_VALUE;
         long max_ending_here = 0;
