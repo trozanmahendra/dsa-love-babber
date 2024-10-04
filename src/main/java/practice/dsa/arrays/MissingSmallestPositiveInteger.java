@@ -1,5 +1,6 @@
 package practice.dsa.arrays;
 
+import java.util.Arrays;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
@@ -20,6 +21,15 @@ public class MissingSmallestPositiveInteger {
             if(prevPolled != polled) cursor++;
         }
         return polled+1;
+    }
+    public int solution(int[] A) {
+        Arrays.sort(A);
+        int currSmallPos = 1;
+        for(int i=0;i<A.length;i++){
+            if(A[i] > 0 && A[i] == currSmallPos) currSmallPos++;
+            if(A[i] > currSmallPos) return currSmallPos;
+        }
+        return currSmallPos;
     }
     public static void main(String[] args) {
         System.out.println(find(-47, 1, 4, 49, -18, 10, 26, 18, -11, -38, -24, 36, 44, -11, 45, 20, -16, 28, 17, -49, 47, -48, -33, 42, 2, 6, -49, 30, 36, -9, 15, 39, -6, -31, -10, -21, -19, -33, 47, 21, 31, 25, -41, -23, 17, 6, 47, 3, 36, 15, -44, 33, -31, -26, -22, 21, -18, -21, -47, -31, 20, 18, -42, -35, -10, -1, 46, -27, -32, -5, -4, 1, -29, 5, 29, 38, 14, -22, -9, 0, 43, -50, -16, 14, -26));
