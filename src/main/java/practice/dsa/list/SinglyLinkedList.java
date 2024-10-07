@@ -1,8 +1,6 @@
 package practice.dsa.list;
 
-import java.io.PrintStream;
-
-public class LinkedList<T> {
+public class SinglyLinkedList<T> {
     Node<T> head;
     Node<T> tail;
     static class Node<T> {
@@ -139,43 +137,43 @@ public class LinkedList<T> {
         }
     }
     public static void main(String[] args) {
-        LinkedList<Integer> linkedList = new LinkedList<>();
+        SinglyLinkedList<Integer> singlyLinkedList = new SinglyLinkedList<>();
         for(int i=0;i<20;i++){
-            linkedList.insert(i);
+            singlyLinkedList.insert(i);
         }
-        linkedList.insert(11);
-        linkedList.insert(12);
-        linkedList.insert(13);
-        linkedList.insert(11);
-        linkedList.deleteFirst(11);
-        linkedList.insertAtStart(876);
-        linkedList.insertAtPos(1,90);
-        linkedList.update(90,990);
-        linkedList.insertAtPos(linkedList.size(), 9000);
-        linkedList.insertAtPos(linkedList.size()-1, 99);
-        linkedList.deleteLast(13);
-        linkedList.updateAll(11,1221);
-        linkedList.display();
-        LinkedList<String> linkedList2 = new LinkedList<>();
-        linkedList2.insert("revanth");
-        linkedList2.insert("revanth");
-        linkedList2.insert("revanth");
-        linkedList2.insert("mahendra");
-        linkedList2.insert("Bharath");
-        linkedList2.insert("Surendra");
-        linkedList2.insert("Rishanth");
-        linkedList2.insert("Rishanth");
-        linkedList2.insert("Rishanth goud");
-        linkedList2.insert("mahendra");
-        linkedList2.insert("revanth");
-        linkedList2.insert("revanth");
-        linkedList2.deleteLast("mahendra");
-        linkedList2.updateAll("revanth","Mahendra");
-        linkedList2.updateAll("Mahendra","Mahendra_Goud");
-        linkedList2.update("Bharath","BHARATH");
-        linkedList2.insert("revanth");
-        linkedList2.display();
-        System.out.println(linkedList2.get(0));
-        System.out.println(linkedList2.size());
+        singlyLinkedList.insert(11);
+        singlyLinkedList.insert(12);
+        singlyLinkedList.insert(13);
+        singlyLinkedList.insert(11);
+        singlyLinkedList.deleteFirst(11);
+        singlyLinkedList.insertAtStart(876);
+        singlyLinkedList.insertAtPos(1,90);
+        singlyLinkedList.update(90,990);
+        singlyLinkedList.insertAtPos(singlyLinkedList.size(), 9000);
+        singlyLinkedList.insertAtPos(singlyLinkedList.size()-1, 99);
+        singlyLinkedList.deleteLast(13);
+        singlyLinkedList.updateAll(11,1221);
+        singlyLinkedList.display();
+        SinglyLinkedList<String> singlyLinkedList2 = new SinglyLinkedList<>();
+        singlyLinkedList2.insert("Ganesh");
+        singlyLinkedList2.insert("Ganesh");
+        singlyLinkedList2.insert("Ganesh");
+        singlyLinkedList2.insert("mahendra");
+        singlyLinkedList2.insert("Bharath");
+        singlyLinkedList2.insert("Surendra");
+        singlyLinkedList2.insert("Rishanth");
+        singlyLinkedList2.insert("Rishanth");
+        singlyLinkedList2.insert("Rishanth goud");
+        singlyLinkedList2.insert("mahendra");
+        singlyLinkedList2.insert("revanth");
+        singlyLinkedList2.insert("revanth");
+        singlyLinkedList2.deleteLast("mahendra");
+        singlyLinkedList2.updateAll("revanth","Mahendra");
+        singlyLinkedList2.updateAll("Mahendra","Mahendra_Goud");
+        singlyLinkedList2.update("Bharath","BHARATH");
+        singlyLinkedList2.insert("revanth");
+        singlyLinkedList2.display();
+        System.out.println(singlyLinkedList2.get(0));
+        System.out.println(singlyLinkedList2.size());
     }
 }
