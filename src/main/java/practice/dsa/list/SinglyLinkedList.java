@@ -3,7 +3,8 @@ package practice.dsa.list;
 public class SinglyLinkedList<T> {
     Node<T> head;
     Node<T> tail;
-    static class Node<T> {
+    Integer size = 0;
+    public static class Node<T> {
         private Node<T> next;
         private  T data;
         Node(T data) {
@@ -20,13 +21,13 @@ public class SinglyLinkedList<T> {
         }
         return count;
     }
-    public T get(int index){
-        T data = null;
+    public Node<T> get(int index){
+        Node<T> data = null;
         Node<T> temp = head;
-        if(index < size()){
+        if(index < size){
             for(int i=0;i<=index;i++){
                 if(temp != null){
-                    data = temp.data;
+                    data = temp;
                     temp = temp.next;
                 }
             }
@@ -42,14 +43,16 @@ public class SinglyLinkedList<T> {
             tail.next = node;
             tail = node;
         }
+        size++;
     }
     public void insertAtStart(T data) {
         Node<T> curr = new Node<>(data);
         curr.next = head;
         head = curr;
+        size++;
     }
     public void insertAtPos(int pos, T data) {
-        if (pos <= size()) {
+        if (pos <= size) {
             Node<T> temp = head;
             if (pos == 0) {
                 insertAtStart(data);
@@ -61,6 +64,7 @@ public class SinglyLinkedList<T> {
             Node<T> curr = new Node<>(data);
             curr.next = temp.next;
             temp.next = curr;
+            size++;
         } else {
             insert(data);
         }
@@ -96,10 +100,12 @@ public class SinglyLinkedList<T> {
             if (temp.data == data) {
                 if (prev == null) head = head.next;
                 else prev.next = temp.next;
+                size--;
                 return true;
             }
             prev = temp;
             temp = temp.next;
+            size--;
         }
         return false;
     }
@@ -120,6 +126,7 @@ public class SinglyLinkedList<T> {
         if(prevOfDel == null && nodeToDelete == null) return false;
         else if(prevOfDel == null) head = head.next;
         else prevOfDel.next = nodeToDelete.next;
+        size--;
         return true;
     }
     public void display() {
@@ -136,6 +143,18 @@ public class SinglyLinkedList<T> {
             System.out.println();
         }
     }
+    public void reverse(){
+        Node<T> prev = null;
+        Node<T> curr = head;
+        tail = curr;
+        while (curr != null){
+            Node<T> next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+        head = prev;
+    }
     public static void main(String[] args) {
         SinglyLinkedList<Integer> singlyLinkedList = new SinglyLinkedList<>();
         for(int i=0;i<20;i++){
@@ -149,8 +168,8 @@ public class SinglyLinkedList<T> {
         singlyLinkedList.insertAtStart(876);
         singlyLinkedList.insertAtPos(1,90);
         singlyLinkedList.update(90,990);
-        singlyLinkedList.insertAtPos(singlyLinkedList.size(), 9000);
-        singlyLinkedList.insertAtPos(singlyLinkedList.size()-1, 99);
+        singlyLinkedList.insertAtPos(singlyLinkedList.size, 9000);
+        singlyLinkedList.insertAtPos(singlyLinkedList.size-1, 99);
         singlyLinkedList.deleteLast(13);
         singlyLinkedList.updateAll(11,1221);
         singlyLinkedList.display();
@@ -172,8 +191,12 @@ public class SinglyLinkedList<T> {
         singlyLinkedList2.updateAll("Mahendra","Mahendra_Goud");
         singlyLinkedList2.update("Bharath","BHARATH");
         singlyLinkedList2.insert("revanth");
+        System.out.println(singlyLinkedList2.head.data+ " "+singlyLinkedList2.tail.data);
+        singlyLinkedList2.reverse();
+        System.out.println(singlyLinkedList2.head.data+ " "+singlyLinkedList2.tail.data);
         singlyLinkedList2.display();
-        System.out.println(singlyLinkedList2.get(0));
+        System.out.println(singlyLinkedList2.get(0).data);
         System.out.println(singlyLinkedList2.size());
+        System.out.println(singlyLinkedList2.size);
     }
 }
