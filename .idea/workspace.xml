@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5e1e9b50-3573-4573-8a24-e6174e94fc3a" name="Changes" comment="union and intersection of two sorted arrays done">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/practice/dsa/arrays/FirstMissingPositive.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/practice/dsa/bit/manupulation/BinaryToInt.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/practice/dsa/bit/manupulation/IntToBinary.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/practice/dsa/bit/manupulation/SingleNonDuplicate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/practice/dsa/prefixsum/CheckSubarraySum.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/practice/dsa/prefixsum/CountSubArraysSumToK.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/practice/dsa/prefixsum/PrefixSumArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/practice/dsa/strings/ReverseWordsInSentence.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/practice/dsa/strings/ValidPalindrome.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/practice/dsa/strings/WordBreak.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_08_24,_1_48 am_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_20_08_24__1_48am__Changes_.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +56,6 @@
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2ktMjTwAwpZ2cwT4FokkEJ6WZBK" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -52,23 +63,32 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "Application.BinaryToInt.executor": "Run",
+    "Application.FirstMissingPositive.executor": "Run",
+    "Application.IntToBinary.executor": "Run",
     "Application.KthMaxAndMin.executor": "Debug",
     "Application.NegativesToLeft.executor": "Run",
+    "Application.PrefixSumArray.executor": "Run",
+    "Application.ReverseWordsInSentence.executor": "Run",
+    "Application.SingleDuplicate.executor": "Run",
+    "Application.SubArraySumToK.executor": "Run",
     "Application.UnionAndIntersectionOfSortedArrays.executor": "Run",
+    "Application.ValidPalindrome.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
     "settings.editor.selected.configurable": "preferences.lookFeel"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.UnionAndIntersectionOfSortedArrays">
-    <configuration name="NegativesToLeft" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="practice.dsa.arrays.NegativesToLeft" />
+  <component name="RunManager" selected="Application.BinaryToInt">
+    <configuration name="BinaryToInt" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice.dsa.bit.manupulation.BinaryToInt" />
       <module name="dsa-love-babber" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="practice.dsa.arrays.*" />
+          <option name="PATTERN" value="practice.dsa.bit.manupulation.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -76,12 +96,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UnionAndIntersectionOfSortedArrays" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="practice.dsa.arrays.UnionAndIntersectionOfSortedArrays" />
+    <configuration name="IntToBinary" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice.dsa.bit.manupulation.IntToBinary" />
       <module name="dsa-love-babber" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="practice.dsa.arrays.*" />
+          <option name="PATTERN" value="practice.dsa.bit.manupulation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReverseWordsInSentence" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice.dsa.strings.ReverseWordsInSentence" />
+      <module name="dsa-love-babber" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="practice.dsa.strings.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SingleDuplicate" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice.dsa.bit.manupulation.SingleDuplicate" />
+      <module name="dsa-love-babber" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="practice.dsa.bit.manupulation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ValidPalindrome" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="practice.dsa.strings.ValidPalindrome" />
+      <module name="dsa-love-babber" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="practice.dsa.strings.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -91,8 +150,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.UnionAndIntersectionOfSortedArrays" />
-        <item itemvalue="Application.NegativesToLeft" />
+        <item itemvalue="Application.BinaryToInt" />
+        <item itemvalue="Application.IntToBinary" />
+        <item itemvalue="Application.SingleDuplicate" />
+        <item itemvalue="Application.ReverseWordsInSentence" />
+        <item itemvalue="Application.ValidPalindrome" />
       </list>
     </recent_temporary>
   </component>
